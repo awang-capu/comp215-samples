@@ -34,6 +34,49 @@ for a in animals:
 
 # E.g.2
 
+# import math
+
+# class Point2D:
+#     """A point on the 2D Cartesian plane."""
+    
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
+
+#     def __str__(self):
+#         return f'({round(self.x, 2)}, {round(self.y, 2)})'
+
+#     def distance(self, other):
+#         """Return the Euclidean distance between this point and another Point2D."""
+#         return math.sqrt((self.x - other.x)**2 + (self.y - other.y)**2)
+
+
+# class LabelledPoint2D(Point2D):
+#     """A labelled point on a 2D Cartesian plane."""
+#     def __str__(self, label):
+#         return f'{label}: ({round(self.x, 2)}, {round(self.y, 2)})'
+
+
+
+# p1 = Point2D(1.2345, 2.3456)
+# p2 = LabelledPoint2D(3.1415, 4.5678)
+# print(p2.__str__('LabelA'))
+
+# print(p1)             # Output: (1.23, 2.35)
+# # print(p1.distance(p2)) 
+# # print(p2.distance(p1))
+
+
+
+"""
+Type B: ChildClass adds new attributes: ChildClass defines __init__ and should call super().__init__()
+Note: 
+Clear explicit initialization. 
+Child constructor overrides parent constructor. If still want the parent initialization, call super().__init__()
+"""
+
+# E.g. 2.1
+
 import math
 
 class Point2D:
@@ -65,20 +108,15 @@ class LabelledPoint2D(Point2D):
 p1 = Point2D(1.2345, 2.3456)
 p2 = LabelledPoint2D(3.1415, 4.5678, "A")
 
+
 print(p1)             # Output: (1.23, 2.35)
 print(p2)             # Output: A: (3.14, 4.57)
 print(p1.distance(p2)) 
 print(p2.distance(p1))
 
 
-"""
-Type B: ChildClass adds new attributes: ChildClass defines __init__ and should call super().__init__()
-Note: 
-Clear explicit initialization. 
-Child constructor overrides parent constructor. If still want the parent initialization, call super().__init__()
-"""
 
-'''
+# E.g. 3
 # Base class
 class Car:
     def __init__(self, brand, model, year):
@@ -141,7 +179,7 @@ tesla1.charge()
 tesla1.autopilot()
 
 
-'''
+
 
 
 
